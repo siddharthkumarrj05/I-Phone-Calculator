@@ -1,0 +1,51 @@
+.Calculator {
+    background: black;
+    padding: 15px;
+    width: 363px;
+    border-radius: 10px;
+}
+input#display {
+    width: 100%;
+    height: 70px;
+    font-size: 48px;
+    font-weight: 300;
+    color: #fff;
+    border: none;
+    padding-right: 15px;
+    text-align: end;
+    background: black;
+}
+input:focus-visible {
+    outline: none !important;
+}
+input#display::placeholder{
+    color: #fff;
+}
+.Calculator button {
+    background: #333333;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    border: none;
+    margin: 5px;
+}
+.Calculator button:hover{
+    opacity: 0.8;
+}
+.gray-btn{
+    background: #a5a5a5 !important;
+}
+button.opra-btn {
+    background: #f0a33f;
+}
+.backbtn{
+    background: #fa6161 !important;
+}
+.pill-btn{
+    width: 150px !important;
+    text-align: start;
+    padding-left: 25px;
+}

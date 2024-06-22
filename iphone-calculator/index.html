@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap Css Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Bootstrap Css end -->
+
+<!-- custom css -->
+<link rel="stylesheet" href="style.css">
+
+<title>Calculator</title>
+</head>
+
+<body>
+
+    <h1 class="text-center mt-5 .bg-success">i-Phone Calculator</h1>
+
+    <section class="Calculator-sec">
+        <div class="container">
+            <div class="Calculator mx-auto mt-3">
+                <input type="text" id="display" placeholder="0"><br>
+                <button onclick="Clear()" class="gray-btn">C</button>
+                <button onclick="back()" class="backbtn">←</button>
+                <button onclick="Btnvalue('%')" class="gray-btn">%</button>
+                <button onclick="Btnvalue('/')" class="opra-btn">÷</button><br>
+                <button onclick="Btnvalue('7')">7</button>
+                <button onclick="Btnvalue('8')">8</button>
+                <button onclick="Btnvalue('9')">9</button>
+                <button onclick="Btnvalue('*')" class="opra-btn">×</button><br>
+                <button onclick="Btnvalue('4')">4</button>
+                <button onclick="Btnvalue('5')">5</button>
+                <button onclick="Btnvalue('6')">6</button>
+                <button onclick="Btnvalue('-')" class="opra-btn">–</button><br>
+                <button onclick="Btnvalue('1')">1</button>
+                <button onclick="Btnvalue('2')">2</button>
+                <button onclick="Btnvalue('3')">3</button>
+                <button onclick="Btnvalue('+')" class="opra-btn">+</button><br>
+                <button onclick="Btnvalue('0')" class="pill-btn">0</button>
+                <button onclick="Btnvalue('.')">.</button>
+                <button onclick="Equals()" class="opra-btn">=</button><br>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        
+        const display = document.getElementById("display")
+
+        function Btnvalue(input){
+            display.value += input;
+        }
+        function Clear(){
+            display.value = "";
+        }
+        function back(){
+            display.value = display.value.slice(0, -1);
+        }
+        function Equals(){
+            display.value = eval(display.value)
+        }
+        
+    </script>
+
+</body>
+</html>
